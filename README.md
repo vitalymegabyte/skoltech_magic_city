@@ -1,3 +1,17 @@
+# Команда Magic City, кейс "распознавание инфраструктурных объектов"
+
+Видеодемо: https://drive.google.com/file/d/1W8T7N7y5Jv0exvQhGcMsGL_5W8hy4s5A/view
+
+Для прогона используем команду:
+
+```
+python3 predict.py FOLDER/WITH/IMAGES
+```
+
+Результат выводится в папку `test_out`
+
+## Загрузка датасетов для предобучения
+
 Запустить код ниже, для загрузки необходимой части датасета SpaceNet
 `aws s3 cp s3://spacenet-dataset/spacenet/SN4_buildings/tarballs/train/Atlanta_nadir7_catid_1030010003D22F00.tar.gz .
 aws s3 cp s3://spacenet-dataset/spacenet/SN4_buildings/tarballs/train/Atlanta_nadir10_catid_1030010003993E00.tar.gz .
