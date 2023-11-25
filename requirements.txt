@@ -4,3 +4,4 @@ timm
 geopandas
 matplotlib
 numpy
+imgaug

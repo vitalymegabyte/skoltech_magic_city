@@ -61,7 +61,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--amp', default=True, type=bool)
 parser.add_argument("--fold", default=0, type=int)
 parser.add_argument("--encoder", default='convnextv2_base.fcmae_ft_in22k_in1k') #  coat_lite_medium
-parser.add_argument("--checkpoint", default='convnextv2_base_256_e04_pretrain')  
+parser.add_argument("--checkpoint", default='convnextv2_base_256_e04_0')  
 parser.add_argument("--batch_size", default=8, type=int)
 parser.add_argument('--pretrained', default=True, type=bool)
 parser.add_argument("--checkpoint_path", default='')
@@ -337,7 +337,7 @@ if __name__ == '__main__':
 
     # best_score, _sc = evaluate_val(val_data_loader, -1, model, best_snapshot_name, 16, amp_autocast)
     best_score = 0
-    for epoch in range(start_epoch, 5): #start_epoch
+    for epoch in range(start_epoch, 1): #start_epoch
         torch.cuda.empty_cache()
         if args.distributed:
             train_sampler.set_epoch(epoch)
